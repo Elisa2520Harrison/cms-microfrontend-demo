@@ -4,8 +4,24 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "concurrently \"pnpm run dev:shell\" \"pnpm run dev:members\" \"pnpm run dev:events\" \"pnpm run dev:admin\"",
+
+    "dev:shell": "pnpm --filter shell dev",
+    "dev:members": "pnpm --filter members-app dev",
+    "dev:events": "pnpm --filter events-app dev",
+    "dev:admin": "pnpm --filter admin-app dev",
+
+    "build": "pnpm -r build",
+
+    "preview:shell": "pnpm --filter shell preview",
+    "preview:members": "pnpm --filter members-app preview",
+    "preview:events": "pnpm --filter events-app preview",
+    "preview:admin": "pnpm --filter admin-app preview"
+
+    
   },
+
+  
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -16,5 +32,8 @@
       "onFail": "download"
     }
   },
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "concurrently": "^10.0.3"
+  }
 }

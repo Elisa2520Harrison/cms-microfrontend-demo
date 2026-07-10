@@ -6,17 +6,17 @@ export default defineConfig({
   plugins: [
     react(),
     federation({
-      name: 'members_app',
+      name: 'events_app',
       filename: 'remoteEntry.js',
       exposes: {
-        './MembersApp': './src/MembersApp.tsx',
-      }, 
+        './EventsApp': './src/pages/EventsApp.tsx',
+      },
       shared: ['react', 'react-dom'],
     }),
   ],
 
   server: {
-    port: 3001,
+    port: 3002,
   },
 
   build: {

@@ -9,7 +9,7 @@ export default defineConfig({
       name: 'admin_app',
       filename: 'remoteEntry.js',
       exposes: {
-        './AdminApp': './src/AdminApp.tsx',
+        './AdminApp': './src/pages/AdminApp.tsx',
       },
       shared: ['react', 'react-dom'],
     }),
