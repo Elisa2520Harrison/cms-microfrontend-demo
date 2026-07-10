@@ -1,7 +1,7 @@
-import EventsPage from "./pages/EventsPage";
+import EventsApp from "./pages/EventsApp";
 
 function App() {
-  return <EventsPage />;
+  return <EventsApp />;
 }
 
 export default App;

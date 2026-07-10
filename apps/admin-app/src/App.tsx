@@ -1,7 +1,7 @@
-import MembersPage from './pages/AdminPage';
+import AdminApp from './pages/AdminApp';
 
 function App() {
-  return <MembersPage />;
+  return <AdminApp />;
 }
 
 export default App;
