@@ -1,0 +1,1 @@
+declare module 'members_app/MembersApp';
